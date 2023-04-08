@@ -1,7 +1,8 @@
 import Layout from "@/components/Layout";
-import { Inter, Lato } from "next/font/google";
+import { Inter, Josefin_Sans, Lato } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+
 const lato = Lato({ subsets: ["latin"], weight: ["100", "300"] });
 export default function Home() {
   return (
