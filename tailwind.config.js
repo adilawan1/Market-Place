@@ -28,6 +28,7 @@ module.exports = {
       "blue-text": "#8A8FB9",
       pink: "#FB2E86",
       input: "#E7E6EF",
+      prod: "#F6F7FB",
     },
     extend: {},
   },

@@ -10,7 +10,7 @@ type Props = {
   title?: string;
 };
 
-const Layout = ({ children, title = "This is a title" }: Props) => {
+const Layout = ({ children, title = "SEMASTORE" }: Props) => {
   return (
     <div>
       <Head>
@@ -45,15 +45,15 @@ const Layout = ({ children, title = "This is a title" }: Props) => {
                 <div className="grow">Pages</div>
                 <div className="grow">Products</div>
               </div>
-              <div className="flex flex-row absolute bottom-0 right-0 px-4 ">
-                <div>
+              <div className="flex flex-row py-2 justify-end">
+                <div className="rounded">
                   <input
                     title="search"
-                    placeholder="Search..."
-                    className="bg-white shadow-sm focus:outline-none outline outline-input"
+                    placeholder="  Search..."
+                    className="bg-white shadow-sm focus:outline-input outline outline-input w-60 rounded-l"
                   />
                 </div>
-                <div className="bg-pink px-1 outline outline-pink">
+                <div className="bg-pink px-1 outline outline-pink rounded-r">
                   <Image src={Searchimg} alt="Picture of the author" />
                 </div>
               </div>
@@ -61,21 +61,37 @@ const Layout = ({ children, title = "This is a title" }: Props) => {
           </div>
         </nav>
       </header>
-      <div className="h-screen">{children}</div>
-      <footer className="flex flex-col justify-center">
+      <div className="">{children}</div>
+      <footer className="flex flex-col justify-center mt-2">
         <div className="bg-light-pink">
-          <div className="container mx-auto px-4 grid grid-cols-2 relative">
-            <div className="flex flex-col gap-4 justify-center items-center">
+          <div
+            className={`container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 relative ${josef.className} py-2`}
+          >
+            <div className="flex flex-col gap-4 justify-start">
               <div className="text-3xl font-bold">Hekto</div>
-              <div className="text-blue-text">Home</div>
-              <div className="text-blue-text">Pages</div>
-              <div className="text-blue-text">Products</div>
+              <div className="flex flex-row ">
+                <div className="rounded">
+                  <input
+                    title="search"
+                    placeholder="  Enter your email"
+                    className="bg-white shadow-sm focus:outline-input outline outline-input ww-3/4 rounded-l"
+                  />
+                </div>
+                <div className="bg-pink px-1 outline outline-pink rounded-r text-white">
+                  Email
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col gap-4 items-center">
+            <div className={`flex flex-col gap-4 ${josef.className}`}>
               <div className="text-3xl font-bold">Categories</div>
               <div className="text-blue-text">Home</div>
               <div className="text-blue-text">Pages</div>
               <div className="text-blue-text">Products</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold">Location</div>
+              <p className="text-blue-text">17 Princess Road, London,</p>
+              <p className="text-blue-text"> Greater London NW1 8JR, UK</p>
             </div>
           </div>
         </div>
