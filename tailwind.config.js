@@ -26,6 +26,8 @@ module.exports = {
       black: "#000000",
       "light-blue": "#E7E4F8",
       "blue-text": "#8A8FB9",
+      pink: "#FB2E86",
+      input: "#E7E6EF",
     },
     extend: {},
   },

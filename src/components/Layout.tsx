@@ -1,7 +1,8 @@
 import React, { ReactNode } from "react";
-import Link from "next/link";
 import Head from "next/head";
 import { Josefin_Sans } from "next/font/google";
+import Image from "next/image";
+import Searchimg from "./Vector.svg";
 
 const josef = Josefin_Sans({ subsets: ["latin"] });
 type Props = {
@@ -20,7 +21,7 @@ const Layout = ({ children, title = "This is a title" }: Props) => {
       <header>
         <nav>
           <div
-            className={`flex bg-violet text-white text-center ${josef.className} border-black drop-shadow-md`}
+            className={`flex bg-violet text-white text-center ${josef.className} border-black drop-shadow-md p-2`}
           >
             <div className="container mx-auto px-4 color grid grid-cols-3 ">
               <div className="flex flex-row gap-4 justify-start">
@@ -37,16 +38,24 @@ const Layout = ({ children, title = "This is a title" }: Props) => {
             </div>
           </div>
           <div className={`flex bg-white text-black ${josef.className} pt-2.5`}>
-            <div className="container mx-auto px-4 grid grid-cols-3 relative">
+            <div className="container mx-auto px-4 grid grid-cols-2 justify-items-stretch relative">
               <div className="flex flex-row gap-4 justify-start items-baseline">
-                <div className="text-3xl font-bold">Hekto</div>
-                <div>Home</div>
-                <div>Pages</div>
-                <div>Products</div>
+                <div className="text-3xl font-bold grow">Hekto</div>
+                <div className="grow">Home</div>
+                <div className="grow">Pages</div>
+                <div className="grow">Products</div>
               </div>
-              <div></div>
-              <div className="flex flex-row gap-4 justify-end absolute bottom-0 right-0 px-4">
-                <div>SEARCHSEARCH</div>
+              <div className="flex flex-row absolute bottom-0 right-0 px-4 ">
+                <div>
+                  <input
+                    title="search"
+                    placeholder="Search..."
+                    className="bg-white shadow-sm focus:outline-none outline outline-input"
+                  />
+                </div>
+                <div className="bg-pink px-1 outline outline-pink">
+                  <Image src={Searchimg} alt="Picture of the author" />
+                </div>
               </div>
             </div>
           </div>
