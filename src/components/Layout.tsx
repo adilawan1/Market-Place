@@ -29,7 +29,7 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
                 <div>0336-6205950</div>
               </div>
               <div></div>
-              <div className="flex flex-row  gap-4 justify-end">
+              <div className="flex flex-row gap-4 justify-end">
                 <div>English</div>
                 <div>USD</div>
                 <div>Wish List</div>
@@ -45,7 +45,7 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
                 <div className="grow">Pages</div>
                 <div className="grow">Products</div>
               </div>
-              <div className="flex flex-row py-2 justify-end">
+              <div className="flex flex-row py-2 justify-end hidden sm:inline-flex ">
                 <div className="rounded">
                   <input
                     title="search"

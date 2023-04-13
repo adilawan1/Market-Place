@@ -8,7 +8,7 @@ type ItemCard_Props = {
 
 const ItemCard = ({ title, price, picture }: ItemCard_Props) => {
   return (
-    <div className=" w-1/2 mx-auto sm: basis-1/4">
+    <div className=" mx-auto md: basis-1/4">
       <div className=" bg-prod mt-4 mx-4 rounded flex flex-col justify-center items-center">
         <Image src={picture} alt="product"></Image>
       </div>
