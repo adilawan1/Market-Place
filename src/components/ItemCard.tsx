@@ -8,8 +8,8 @@ type ItemCard_Props = {
 
 const ItemCard = ({ title, price, picture }: ItemCard_Props) => {
   return (
-    <div className=" mx-auto md: basis-1/4">
-      <div className=" bg-prod mt-4 mx-4 rounded flex flex-col justify-center items-center">
+    <div className=" transition duration-300 hover:scale-110">
+      <div className=" bg-prod mt-4 mx-4 rounded flex flex-col justify-center items-center h-60">
         <Image src={picture} alt="product"></Image>
       </div>
       <div className=" h-20 bg-white drop-shadow-md h-20 mb-4 mx-4 rounded flex flex-col justify-center items-center">

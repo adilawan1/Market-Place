@@ -3,7 +3,9 @@ import Head from "next/head";
 import { Josefin_Sans } from "next/font/google";
 import Image from "next/image";
 import Searchimg from "./Vector.svg";
-
+import globe from "../Assets/down.svg";
+import user from "../Assets/carbon_user.svg";
+import heart from "../Assets/Vector (1).svg";
 const josef = Josefin_Sans({ subsets: ["latin"] });
 type Props = {
   children?: ReactNode;
@@ -23,34 +25,64 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
           <div
             className={`flex bg-violet text-white text-center ${josef.className} border-black drop-shadow-md p-2`}
           >
-            <div className="container mx-auto px-4 color grid grid-cols-3 ">
-              <div className="flex flex-row gap-4 justify-start">
-                <div>1ahmed2adil3awan@gmail.com</div>
-                <div>0336-6205950</div>
+            <div className="container mx-auto px-4 color grid sm:grid-cols-2 ">
+              <div className="flex flex-row justify-start">
+                <div className="text-base">English&nbsp;</div>
+                <div>
+                  <Image
+                    src={globe}
+                    alt="Picture of the author"
+                    className="h-5"
+                  />
+                </div>
               </div>
-              <div></div>
               <div className="flex flex-row gap-4 justify-end">
-                <div>English</div>
-                <div>USD</div>
-                <div>Wish List</div>
-                <div>Log In</div>
+                <div className="flex flex-row justify-end ">
+                  <div className="text-base">Wish List&nbsp;</div>
+                  <div>
+                    <Image
+                      src={heart}
+                      alt="Picture of the author"
+                      className="h-5"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex flex-row justify-end ">
+                  <div className="text-base">Log In&nbsp;</div>
+                  <div>
+                    <Image
+                      src={user}
+                      alt="Picture of the author"
+                      className="h-5"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div className={`flex bg-white text-black ${josef.className} pt-2.5`}>
-            <div className="container mx-auto px-4 grid grid-cols-2 justify-items-stretch relative">
-              <div className="flex flex-row gap-4 justify-start items-baseline">
-                <div className="text-3xl font-bold grow">Hekto</div>
-                <div className="grow">Home</div>
-                <div className="grow">Pages</div>
-                <div className="grow">Products</div>
+            <div className="container mx-auto px-4 grid sm:grid-cols-2 justify-items-stretch relative">
+              <div className="flex flex-row sm:justify-start items-baseline">
+                <div className="text-5xl sm:text-3xl md:text-5xl text-center font-bold grow">
+                  Hekto
+                </div>
+                <div className="text-base lg:text-xl grow hidden sm:inline-flex">
+                  Home
+                </div>
+                <div className="text-base lg:text-xl grow hidden sm:inline-flex">
+                  Pages
+                </div>
+                <div className="text-base lg:text-xl grow hidden sm:inline-flex">
+                  Products
+                </div>
               </div>
-              <div className="flex flex-row py-2 justify-end hidden sm:inline-flex ">
+              <div className="flex flex-row py-3 justify-end hidden sm:inline-flex ">
                 <div className="rounded">
                   <input
                     title="search"
-                    placeholder="  Search..."
-                    className="bg-white shadow-sm focus:outline-input outline outline-input w-60 rounded-l"
+                    placeholder="Search..."
+                    className="bg-white shadow-sm focus:outline-input outline outline-input w-60 rounded-l h-full px-2"
                   />
                 </div>
                 <div className="bg-pink px-1 outline outline-pink rounded-r">
@@ -67,7 +99,7 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
           <div
             className={`container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 relative ${josef.className} py-2`}
           >
-            <div className="flex flex-col gap-4 justify-start">
+            <div className="flex flex-col gap-4 justify-start py-5">
               <div className="text-3xl font-bold">Hekto</div>
               <div className="flex flex-row ">
                 <div className="rounded">
@@ -81,25 +113,27 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
                   Email
                 </div>
               </div>
+              <div className="text-blue-text">
+                Enter your email to get notified
+              </div>
             </div>
-            <div className={`flex flex-col gap-4 ${josef.className}`}>
+            <div className={`flex flex-col gap-4 ${josef.className} py-5`}>
               <div className="text-3xl font-bold">Categories</div>
               <div className="text-blue-text">Home</div>
               <div className="text-blue-text">Pages</div>
               <div className="text-blue-text">Products</div>
             </div>
             <div>
-              <div className="text-3xl font-bold">Location</div>
-              <p className="text-blue-text">17 Princess Road, London,</p>
-              <p className="text-blue-text"> Greater London NW1 8JR, UK</p>
+              <div className="text-3xl font-bold py-5">Location</div>
+              <p className="text-blue-text">
+                17 Princess Road, London, Greater London NW1 8JR, UK
+              </p>
             </div>
           </div>
         </div>
         <div className="bg-light-blue">
-          <div className="flex flex-row  gap-4 justify-center">
-            <div className="text-blue-text">English</div>
-            <div className="text-blue-text">USD</div>
-            <div className="text-blue-text">Wish List</div>
+          <div className="flex flex-row justify-center">
+            <div className="text-blue-text">SemaStore &copy;</div>
           </div>
         </div>
       </footer>
