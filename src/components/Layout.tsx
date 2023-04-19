@@ -64,20 +64,14 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
           <div className={`flex bg-white text-black ${josef.className} pt-2.5`}>
             <div className="container mx-auto px-4 grid sm:grid-cols-2 justify-items-stretch relative">
               <div className="flex flex-row sm:justify-start items-baseline">
-                <div className="text-5xl sm:text-3xl md:text-5xl text-center font-bold grow">
+                <div className="text-5xl sm:text-3xl md:text-5xl text-center sm:text-left font-bold grow">
                   Hekto
-                </div>
-                <div className="text-base lg:text-xl grow hidden sm:inline-flex">
-                  Home
-                </div>
-                <div className="text-base lg:text-xl grow hidden sm:inline-flex">
-                  Pages
                 </div>
                 <div className="text-base lg:text-xl grow hidden sm:inline-flex">
                   Products
                 </div>
               </div>
-              <div className="flex flex-row py-3 justify-end hidden sm:inline-flex ">
+              <div className="sm:flex flex-row py-3 justify-end hidden">
                 <div className="rounded">
                   <input
                     title="search"

@@ -12,7 +12,7 @@ const ItemCard = ({ title, price, picture }: ItemCard_Props) => {
       <div className=" bg-prod mt-4 mx-4 rounded flex flex-col justify-center items-center h-60">
         <Image src={picture} alt="product"></Image>
       </div>
-      <div className=" h-20 bg-white drop-shadow-md h-20 mb-4 mx-4 rounded flex flex-col justify-center items-center">
+      <div className=" h-20 bg-white drop-shadow-md mb-4 mx-4 rounded flex flex-col justify-center items-center">
         <div className="text-pink font-bold">{title}</div>
         <div>{price}</div>
       </div>

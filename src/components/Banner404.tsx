@@ -9,7 +9,7 @@ type Banner_Props = {
   picture?: any;
 };
 
-const Banner = ({
+const Banner404 = ({
   title,
   description,
   introduction,
@@ -17,8 +17,8 @@ const Banner = ({
 }: Banner_Props) => {
   return (
     <div className={`bg-light-pink w-full ${josef.className}`}>
-      <div className="container mx-auto px-4 grid sm:grid-cols-2 place-items-center h-full">
-        <div className="flex flex-col justify-center text-center sm:text-left">
+      <div className="container mx-auto px-4 h-full">
+        <div className="flex flex-col justify-center text-center">
           {introduction && (
             <div className="text-pink text-sm sm:text-xl py-4">
               {introduction}
@@ -38,4 +38,4 @@ const Banner = ({
     </div>
   );
 };
-export default Banner;
+export default Banner404;

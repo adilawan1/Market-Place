@@ -1,11 +1,6 @@
 import Image from "next/image";
 import ItemCard from "./ItemCard";
-
-interface ItemCard_Props {
-  title?: string;
-  price?: string;
-  picture?: any;
-}
+import { ItemCard_Props } from "@/Interfaces";
 
 type ItemList_Props = {
   title?: string;
