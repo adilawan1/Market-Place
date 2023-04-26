@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import Head from "next/head";
 import { Josefin_Sans } from "next/font/google";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import Searchimg from "./Vector.svg";
 import globe from "../Assets/down.svg";
 import user from "../Assets/carbon_user.svg";
 import heart from "../Assets/Vector (1).svg";
+import Link from "next/link";
 const josef = Josefin_Sans({ subsets: ["latin"] });
 type Props = {
   children?: ReactNode;
@@ -13,6 +14,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = "SEMASTORE" }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <Head>
@@ -64,11 +66,39 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
           <div className={`flex bg-white text-black ${josef.className} pt-2.5`}>
             <div className="container mx-auto px-4 grid sm:grid-cols-2 justify-items-stretch relative">
               <div className="flex flex-row sm:justify-start items-baseline">
-                <div className="text-5xl sm:text-3xl md:text-5xl text-center sm:text-left font-bold grow">
+                <Link
+                  className="text-5xl sm:text-3xl md:text-5xl text-center sm:text-left font-bold grow"
+                  href="/"
+                >
                   Hekto
-                </div>
+                </Link>
                 <div className="text-base lg:text-xl grow hidden sm:inline-flex">
-                  Products
+                  <div className="dropdown" onClick={() => setIsOpen(!isOpen)}>
+                    <button
+                      type="button"
+                      className="px-3  transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-pink duration-150"
+                      id="menu-button"
+                    >
+                      Products &gt;
+                    </button>
+                    {isOpen && (
+                      <div
+                        className=" absolute z-10 w-48 py-4 px-3 focus:outline-none rounded shadow-lg hover:bg-grey bg-white"
+                        role="menu"
+                        tabIndex={-1}
+                      >
+                        <Link
+                          className="transition ease-in-out py-4 hover:-translate-y-1 hover:scale-110 hover:text-pink duration-150"
+                          href="/products/sofas"
+                          role="menuitem"
+                          tabIndex={-1}
+                          id="menu-item-0"
+                        >
+                          Sofas
+                        </Link>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="sm:flex flex-row py-3 justify-end hidden">

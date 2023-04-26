@@ -36,7 +36,7 @@ export default function Products({ items }: Props) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Get the paths we want to pre-render based on users
-  const paths = [{ params: { slug: "Sofas" } }];
+  const paths = [{ params: { slug: "sofas" } }];
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
