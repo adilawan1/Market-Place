@@ -15,6 +15,7 @@ type Props = {
 
 const Layout = ({ children, title = "SEMASTORE" }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [email, setEmail] = useState("Email");
   return (
     <div>
       <Head>
@@ -76,14 +77,14 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
                   <div className="dropdown" onClick={() => setIsOpen(!isOpen)}>
                     <button
                       type="button"
-                      className="px-3  transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-pink duration-150"
+                      className="px-3 transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-pink duration-150"
                       id="menu-button"
                     >
-                      Products &gt;
+                      Products
                     </button>
                     {isOpen && (
                       <div
-                        className=" absolute z-10 w-48 py-4 px-3 focus:outline-none rounded shadow-lg hover:bg-grey bg-white"
+                        className="absolute z-10 w-48 mt-0.5 py-4 px-3 focus:outline-none rounded shadow-lg hover:bg-grey bg-white"
                         role="menu"
                         tabIndex={-1}
                       >
@@ -129,13 +130,18 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
                 <div className="rounded">
                   <input
                     title="search"
-                    placeholder="  Enter your email"
-                    className="bg-white shadow-sm focus:outline-input outline outline-input ww-3/4 rounded-l"
+                    placeholder="Enter your email"
+                    className="bg-white shadow-sm focus:outline-input outline outline-input rounded-l p-2"
                   />
                 </div>
-                <div className="bg-pink px-1 outline outline-pink rounded-r text-white">
-                  Email
-                </div>
+                <button
+                  onClick={() => {
+                    setEmail("Try Again!");
+                  }}
+                  className="bg-pink px-1 outline outline-pink rounded-r text-white"
+                >
+                  {email}
+                </button>
               </div>
               <div className="text-blue-text">
                 Enter your email to get notified
@@ -143,9 +149,15 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
             </div>
             <div className={`flex flex-col gap-4 ${josef.className} py-5`}>
               <div className="text-3xl font-bold">Categories</div>
-              <div className="text-blue-text">Home</div>
-              <div className="text-blue-text">Pages</div>
-              <div className="text-blue-text">Products</div>
+              <Link className="text-blue-text" href="/">
+                Home
+              </Link>
+              <Link className="text-blue-text" href="/pages">
+                Pages
+              </Link>
+              <Link className="text-blue-text" href="/products/sofas">
+                Products
+              </Link>
             </div>
             <div>
               <div className="text-3xl font-bold py-5">Location</div>

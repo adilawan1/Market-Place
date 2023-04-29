@@ -3,10 +3,10 @@ import Banner from "@/components/Banner";
 import Layout from "@/components/Layout";
 import { Josefin_Sans } from "next/font/google";
 import Chair from "../../Assets/Sofa.png";
-import Prod1 from "../../Assets/Prod1.png";
-import Prod2 from "../../Assets/Prod2.png";
-import Prod3 from "../../Assets/Prod3.png";
-import Prod4 from "../../Assets/Prod4.png";
+import Prod1 from "../../Assets/Sofa4.png";
+import Prod2 from "../../Assets/Sofa1.png";
+import Prod3 from "../../Assets/Sofa2.png";
+import Prod4 from "../../Assets/Sofa3.png";
 import CardList from "@/components/CardList";
 import { useRouter } from "next/router";
 const josef = Josefin_Sans({ subsets: ["latin"] });
@@ -46,10 +46,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const items = [
-      { title: "Cantilever chair", price: "$42.00", picture: Prod1 },
-      { title: "Cantilever chair", price: "$30.00", picture: Prod2 },
-      { title: "Cantilever chair", price: "$51.00", picture: Prod3 },
-      { title: "Cantilever chair", price: "$80.00", picture: Prod4 },
+      { title: "Comfort Handy Craft", price: "$42.00", picture: Prod1 },
+      { title: "Comfort Handy Craft", price: "$30.00", picture: Prod2 },
+      { title: "Comfort Handy Craft", price: "$51.00", picture: Prod3 },
+      { title: "Comfort Handy Craft", price: "$80.00", picture: Prod4 },
     ];
 
     // By returning { props: item }, the StaticPropsDetail component

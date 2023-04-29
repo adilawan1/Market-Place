@@ -29,6 +29,8 @@ module.exports = {
       pink: "#FB2E86",
       input: "#E7E6EF",
       prod: "#F6F7FB",
+      prodblue: "#2F1AC4",
+      green: "#08D15F",
     },
     extend: {},
   },
