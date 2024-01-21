@@ -31,16 +31,16 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
             <div className="container mx-auto px-4 color grid sm:grid-cols-2 ">
               <div className="flex flex-row justify-start">
                 <div className="text-base">English&nbsp;</div>
-                <div>
+                {/* <div>
                   <Image
                     src={globe}
                     alt="Picture of the author"
                     className="h-5"
                   />
-                </div>
+                </div> */}
               </div>
               <div className="flex flex-row gap-4 justify-end">
-                <div className="flex flex-row justify-end ">
+                {/* <div className="flex flex-row justify-end ">
                   <div className="text-base">Wish List&nbsp;</div>
                   <div>
                     <Image
@@ -49,10 +49,10 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
                       className="h-5"
                     />
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex flex-row justify-end ">
-                  <div className="text-base">Log In&nbsp;</div>
+                  <Link href='/login' className="text-base">Log In&nbsp;</Link>
                   <div>
                     <Image
                       src={user}
@@ -151,9 +151,6 @@ const Layout = ({ children, title = "SEMASTORE" }: Props) => {
               <div className="text-3xl font-bold">Categories</div>
               <Link className="text-blue-text" href="/">
                 Home
-              </Link>
-              <Link className="text-blue-text" href="/pages">
-                Pages
               </Link>
               <Link className="text-blue-text" href="/products/sofas">
                 Products

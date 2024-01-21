@@ -22,14 +22,12 @@ export default function Products({ items }: Props) {
   const slug = (router.query.slug as string) || null;
   return (
     <div className={josef.className}>
-      <Layout>
         <Banner
           introduction="Home &rarr; Products"
           title="Explore Our Products"
           picture={Chair}
         />
         {items && <CardList title={`Featured ${slug}`} ItemCard_List={items} />}
-      </Layout>
     </div>
   );
 }

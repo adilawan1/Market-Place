@@ -15,7 +15,6 @@ type Props = {
 export default function NotFound({ NotFoundImage }: Props) {
   return (
     <div className={josef.className}>
-      <Layout>
         <Banner404
           introduction="
           "
@@ -43,7 +42,6 @@ export default function NotFound({ NotFoundImage }: Props) {
             }}
           />
         </div>
-      </Layout>
     </div>
   );
 }

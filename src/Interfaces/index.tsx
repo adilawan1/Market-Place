@@ -1,5 +1,77 @@
 export type ItemCard_Props = {
-  title?: string;
+  title: string | undefined;
+  name?: string;
   price?: string;
   picture?: any;
+  type?: string;
+  _id?: string;
+};
+
+export type Challenge_Props = {
+  challenge: {
+    activity: string;
+    name?: string;
+    price?: string;
+    picture?: any;
+    type?: string;
+    _id?: string;
+  };
+};
+
+export type Prod_Props = {
+  product: {
+    activity: string;
+    name?: string;
+    price?: string;
+    picture?: any;
+    type?: string;
+    _id?: string;
+  };
+};
+
+// An interface for our actions
+interface AccountAction {
+  type: "ACCOUNT_UPDATE";
+  payload: number;
+}
+
+// An interface for our state
+interface AccountState {
+  firstName: string | null;
+  lastName: string | null;
+  userName: string | null;
+  profile: number | string | null;
+  token: string | null;
+  email: string | null;
+  role: string | null;
+}
+
+// An interface for our state
+interface CartState {
+  Count: string | null;
+  Price: string | null;
+}
+
+export const initialState = {
+  account: {
+    firstName: "",
+    lastName: "",
+    userName: "",
+    profile: 0,
+    token: "",
+    email: "",
+    role: "",
+  },
+};
+
+export const initialCartState = {
+  Cart: { Count: 0, Bill: 0 },
+};
+
+export type AccountContextType = {
+  account: AccountState;
+};
+
+export type CartContextType = {
+  Cart: CartState;
 };

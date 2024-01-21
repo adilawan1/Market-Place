@@ -19,7 +19,6 @@ const ItemCards = [
 export default function Home() {
   return (
     <div className={josef.className}>
-      <Layout>
         <Banner
           introduction="Best Furniture For Your Castle...."
           title="New Furniture Collection Trends in 2020"
@@ -27,7 +26,6 @@ export default function Home() {
           picture={Chair}
         />
         <CardList title="Featured Products" ItemCard_List={ItemCards} />
-      </Layout>
     </div>
   );
 }
